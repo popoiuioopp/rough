@@ -1,0 +1,20 @@
+package user
+
+import (
+	"github.com/popoiuioopp/rough/model"
+	"github.com/popoiuioopp/rough/view/components"
+	"github.com/popoiuioopp/rough/view/layout"
+)
+
+templ Show(user model.User) {
+	@layout.Base() {
+		<div>
+			<h1>{ ctx.Value("user").(string) }</h1>
+			<h1>Hello { user.Email } ! from the User page</h1>
+			@components.Input(components.InputProps{
+				Typ:  "email",
+				Name: "email input",
+			})
+		</div>
+	}
+}
