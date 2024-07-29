@@ -9,11 +9,10 @@ import (
 type UserHandler struct {
 }
 
-func (h UserHandler) HandleUserShow(c echo.Context) error {
-
+func (h UserHandler) UserShowHandler(c echo.Context) error {
 	user := model.User{
 		Email: "bigge.gmail.com",
 	}
 
-	return render(c, userView.Show(user))
+	return render(c, userView.UserPage(user))
 }

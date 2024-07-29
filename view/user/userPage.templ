@@ -1,0 +1,18 @@
+package user
+
+import (
+	"github.com/popoiuioopp/rough/model"
+	"github.com/popoiuioopp/rough/view/layout"
+)
+
+templ UserPage(user model.User) {
+	@layout.Base() {
+		<div class="p-6 bg-gray-100">
+			<h1 class="text-xl font-bold">User Profile</h1>
+			<button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded" hx-get="/user/show" hx-target="#user-profile" hx-swap="innerHTML">
+				Load User Profile
+			</button>
+			<div id="user-profile" class="mt-4"></div>
+		</div>
+	}
+}
