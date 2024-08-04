@@ -8,11 +8,11 @@ import (
 func main() {
 	app := echo.New()
 
-	userHandler := handler.UserHandler{}
-
-	app.GET("/user", userHandler.UserShowHandler)
+	handler := handler.Handler{}
 
 	app.Static("/static", "static")
+
+	app.GET("/", handler.LanderHandler)
 
 	app.Start(":3000")
 }
