@@ -1,18 +1,17 @@
 package main
 
 import (
+	"os"
+
 	"github.com/labstack/echo/v4"
-	"github.com/popoiuioopp/rough/handler"
 )
 
 func main() {
 	app := echo.New()
 
-	handler := handler.Handler{}
-
 	app.Static("/static", "static")
 
-	app.GET("/", handler.LanderHandler)
+	port := os.Getenv("PORT")
 
-	app.Start(":3000")
+	app.Logger.Fatal(app.Start(port))
 }
