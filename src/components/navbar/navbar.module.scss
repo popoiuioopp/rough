@@ -1,0 +1,19 @@
+.navbar {
+  background-color: white;
+  width: auto;
+  height: 75px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.2);
+
+  .navbar-link {
+    color: black;
+    margin-right: 15px;
+    text-decoration: none;
+    padding-top: 27px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
