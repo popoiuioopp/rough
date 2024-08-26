@@ -14,16 +14,18 @@ body {
   font-family: "MonaspaceNeon", sans-serif;
 }
 
-.lander {
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  overflow: hidden;
+  box-sizing: border-box;
 
   .image-container {
-    width: 500px;
+    flex: 0 0 500px;
     height: 550px;
-    float: right;
     margin-left: 20px;
-    position: relative;
     padding: 10px;
 
     img {
@@ -35,16 +37,16 @@ body {
     }
   }
 
-  .lander-main-text {
-    margin-right: 20px;
-    float: left;
-    width: calc(100% - 540px);
-    position: relative;
-    top: 240px;
+  .main {
+    flex: 1;
+  }
+
+  .main-text {
     background-color: white;
     border-radius: 0px 20px 20px 0px;
-    padding: 0px 10px;
+    padding: 20px;
     box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+    margin-right: 20px;
 
     h1 {
       margin-bottom: 0px;
@@ -53,6 +55,7 @@ body {
     p {
       margin-top: 0px;
       line-height: 1.5;
+      color: rgb(92, 92, 92);
 
       &::first-letter {
         background: linear-gradient(to bottom, #f48fb1, #ff5722);
@@ -64,31 +67,23 @@ body {
     }
   }
 
-  .contacts {
-    top: 240px;
-    padding: 10px;
-    position: relative;
-    clear: both;
-
+  .contact {
+    margin-left: 20px;
     ul {
       list-style: none;
       padding: 0;
-      margin: 0;
-      gap: 20px;
       display: flex;
-      justify-content: flex-start;
-    }
-
-    li {
-      margin: 0;
-      padding: 0;
-    }
-
-    a {
-      display: inline-flex;
-      color: rgba(0, 0, 0, 0.2);
       align-items: center;
-      justify-content: center;
+
+      li {
+        margin-right: 25px;
+
+        svg {
+          color: #585858;
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
   }
 }
